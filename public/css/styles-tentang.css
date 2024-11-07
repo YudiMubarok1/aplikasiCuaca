@@ -1,0 +1,176 @@
+/* CSS untuk mengatur gambar latar belakang */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: url('/img/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-size: 14px; /* Ukuran font dasar */
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    z-index: -1;
+}
+
+/* Konten utama dengan efek blur dan latar belakang gelap */
+.main-content {
+    max-width: 450px;
+    margin: 40px auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    color: white;
+    padding-bottom: 60px; /* Ruang untuk footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 1000px;
+}
+
+/* Gaya untuk judul aplikasi dan efek cahaya */
+.app-title {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 8px white, 0 0 15px white, 0 0 20px white;
+    margin-bottom: 15px;
+}
+
+/* Navbar */
+.nav-brand, .nav-link {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-shadow: 0 0 8px white, 0 0 15px white, 0 0 20px white;
+}
+
+.nav-link:hover {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Teks dan gambar profil */
+.profile-header h1, .profile-header h2, h3, h4, p, ul, li {
+    color: #dcdcdc;
+}
+
+.profile-pic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    margin-top: 10px;
+}
+
+/* Garis pembatas */
+.section-divider {
+    border-top: 1px solid #555;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+/* Form input dan button */
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%; /* Agar responsif di layar lebih kecil */
+    justify-content: center;
+}
+
+input[type="text"] {
+    padding: 6px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 250px; /* Batas lebar untuk input */
+    border: 1px solid #00ccff;
+    border-radius: 4px;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #00ccff;
+}
+
+button {
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #00ccff;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 12px;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    header {
+        gap: 15px;
+    }
+
+    .app-title {
+        font-size: 20px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .input-container {
+        flex-direction: column;
+    }
+
+    .input-container input[type="text"] {
+        width: 100%;
+    }
+
+    .app-title {
+        font-size: 18px;
+    }
+}
